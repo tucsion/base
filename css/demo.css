@@ -1,68 +1,56 @@
 #demo {
   width: 500px;
-  height: 500px;
-  border: 1px solid #ccc;
+  height: 1500px;
+  border: 10px solid #000;
   margin: 50px auto;
-  padding-top: 100px;
+  padding: 50px;
+  background-image: -webkit-linear-gradient(70deg, #ffffff, #333333);
+  background-image: -moz-linear-gradient(70deg, #ffffff, #333333);
+  background-image: -o-linear-gradient(70deg, #ffffff, #333333);
+  background-image: -ms-linear-gradient(70deg, #ffffff, #333333);
+  background-image: linear-gradient(70deg, #ffffff, #333333);
 }
-#demo a.btn {
-  display: table-cell;
-  height: 50px;
-  width: 50px;
-  border: 1px solid #ccc;
+#demo p {
+  font-size: 30px;
+  line-height: 80px;
+  font-weight: 800;
+}
+#demo .p2 {
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-text-overflow: ellipsis;
+  -khtml-text-overflow: ellipsis;
+  -icab-text-overflow: ellipsis;
+  -moz-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+#demo .p3 a {
+  font-size: 20px;
   vertical-align: middle;
 }
-#demo a.btn span {
-  width: 50px;
-  display: block;
-  position: relative;
-  border-top: 5px solid #000000;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+#demo table {
+  caption-side: bottom;
+  width: ;
+  empty-cells: hide;
 }
-#demo a.btn span:before,
-#demo a.btn span:after {
-  content: '';
-  width: 50px;
-  position: absolute;
-  left: 0;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+#demo table caption {
+  color: red;
 }
-#demo a.btn span:before {
-  bottom: 15px;
-  border-top: 5px solid blue;
+#demo .test5 {
+  width: 300px;
+  height: 300px;
+  border: 1px solid #ccc;
+  background-image: url(../images/fengjing.jpg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  resize: horizontal;
 }
-#demo a.btn span:after {
-  top: 10px;
-  border-top: 5px solid red;
-}
-#demo a.btn:hover span {
-  width: 60px;
-}
-#demo a.btn.active span {
-  border-top-color: #fff;
-  -webkit-transform-origin: center center;
-  -moz-transform-origin: center center;
-  -o-transform-origin: center center;
-  -ms-transform-origin: center center;
-  transform-origin: center center;
-}
-#demo a.btn.active span:before {
-  -webkit-transform: translateY(15px) rotate(-40deg);
-  -moz-transform: translateY(15px) rotate(-40deg);
-  -ms-transform: translateY(15px) rotate(-40deg);
-  -o-transform: translateY(15px) rotate(-40deg);
-  transform: translateY(15px) rotate(-40deg);
-}
-#demo a.btn.active span:after {
-  -webkit-transform: translateY(-15px) rotate(40deg);
-  -moz-transform: translateY(-15px) rotate(40deg);
-  -ms-transform: translateY(-15px) rotate(40deg);
-  -o-transform: translateY(-15px) rotate(40deg);
-  transform: translateY(-15px) rotate(40deg);
+#demo .p6 {
+  font-size: 18px;
+  line-height: 30px;
+  -moz-columns: 100px 3;
+  -webkit-columns: 100px 3;
+  columns: 100px 3;
 }

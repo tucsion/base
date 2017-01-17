@@ -1,40 +1,55 @@
 @import url(mixin.less);
 
-#demo{width: 500px;height: 500px;border: 1px solid #ccc;margin: 50px auto;padding-top: 100px;
+#demo{
+	width: 500px;
+	height: 1500px;
+	border: 10px solid #000;
+	margin: 50px auto;
+	padding: 50px;
+	.linear-gradient(70deg,#fff,#333);
 	
-	a.btn{display: table-cell;height: 50px;width: 50px;border: 1px solid #ccc;vertical-align: middle;
-		span{width: 50px;display: block;position: relative;border-top: 5px solid #000000;
-			.transition(.5s);
-			&:before,&:after{
-				content: '';
-				width:50px;
-				position: absolute;
-				left: 0;
-				.transition(.5s);
-			}
-			&:before{bottom: 15px;border-top: 5px solid blue;}
-			&:after{top: 10px;border-top: 5px solid red;}
-		}
+	p{
+		font-size: 30px;
+		line-height: 80px;
+		font-weight: 800;
+	}
+	
+	.p2{
+		.text-autocut;
+	}
 
-		&:hover{
-			span{width: 60px;}
-		}
-
-		&.active{
-			span{
-				border-top-color: #fff;
-				.transform-origin();
-				&:before{
-					// .transform-origin(right,top);
-					.transform(translateY(15px) rotate(-40deg));
-				}
-				&:after{
-					// .transform-origin(right,bottom);
-					.transform(translateY(-15px) rotate(40deg));
-				}
-			}
+	.p3{
+		a{
+			font-size: 20px;
+			vertical-align: middle;
 		}
 	}
+
+	table{
+		caption{
+			color: red;
+		}
+		caption-side : bottom;
+		width:;
+		// border-collapse: collapse;
+		empty-cells: hide;
+	}
+
+	.test5{
+		width:300px;height:300px;border: 1px solid #ccc;
+		background-image: url(../images/fengjing.jpg);
+		background-position: 0 0;
+		background-repeat: no-repeat;
+		background-size: contain;
+		resize:horizontal;
+	}
+
+	.p6{
+		font-size:18px;
+		line-height: 30px;
+		.columns(100px,3);
+	}
+
 }
 
 
