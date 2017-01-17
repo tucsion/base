@@ -4,23 +4,31 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/dmeo.css">
-
+	<link rel="stylesheet" href="css/demo.css">
 </head>
 <body>
 	
-	<div class="rect-wrap">   
-	    <div class="container">    
-	        <div class="top slide"></div>  
-	        <div class="bottom slide"></div>
-	        <div class="left slide"></div>
-	        <div class="right slide"></div>
-	        <div class="front slide"></div>
-	        <div class="back slide"></div>
-	    </div>
+	<svg id="demo" data-src="images/svg.svg"></svg>
+
+	<div id="box">
+		<div class="box"></div>
 	</div>
 
-
-
+	
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var demoSrc = $('#demo').attr('data-src');
+			$.ajax({
+				url: demoSrc,
+				dataType: 'xml',
+				success : function(data){
+					console.log(data.documentElement);
+					$('#demo').after(data.documentElement).remove();
+				}
+			})
+			
+		})
+	</script>
 </body>
 </html>

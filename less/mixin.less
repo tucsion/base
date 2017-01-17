@@ -18,39 +18,69 @@
 	transition: @prop @time @ease;
 }
 
-//[transform description]
-//none：
-//无转换
-//matrix(<number>,<number>,<number>,<number>,<number>,<number>)：
-//以一个含六值的(a,b,c,d,e,f)变换矩阵的形式指定一个2D变换，相当于直接应用一个[a,b,c,d,e,f]变换矩阵
-//translate(<length>[, <length>])：
-//指定对象的2D translation（2D平移）。第一个参数对应X轴，第二个参数对应Y轴。如果第二个参数未提供，则默认值为0
-//translateX(<length>)：
-//指定对象X轴（水平方向）的平移
-//translateY(<length>)：
-//指定对象Y轴（垂直方向）的平移
-//rotate(<angle>)：
-//指定对象的2D rotation（2D旋转），需先有transform-origin属性的定义
-//scale(<number>[, <number>])：
-//指定对象的2D scale（2D缩放）。第一个参数对应X轴，第二个参数对应Y轴。如果第二个参数未提供，则默认取第一个参数的值
-//scaleX(<number>)：
-//指定对象X轴的（水平方向）缩放
-//scaleY(<number>)：
-//指定对象Y轴的（垂直方向）缩放
-//skew(<angle> [, <angle>])：
-//指定对象skew transformation（斜切扭曲）。第一个参数对应X轴，第二个参数对应Y轴。如果第二个参数未提供，则默认值为0
-//skewX(<angle>)：
-//指定对象X轴的（水平方向）扭曲
-//skewY(<angle>)：
-//指定对象Y轴的（垂直方向）扭曲
-
-.transform (@rotate: 90deg, @scale: 1, @skew: 0deg, @translate: 10px) {
-    -webkit-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
-    -moz-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
-    -o-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
-    -ms-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
-    transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+//
+//2D变换原点
+//<percentage>：用百分比指定坐标值。可以为负值。
+//<length>：用长度值指定坐标值。可以为负值。
+//left：指定原点的横坐标为left
+//center①：指定原点的横坐标为center
+//right：指定原点的横坐标为right
+//top：指定原点的纵坐标为top
+//center②：指定原点的纵坐标为center
+//bottom：指定原点的纵坐标为bottom
+//
+.transform-origin(@x:center,@y:center){
+	-webkit-transform-origin : @x @y;
+	-moz-transform-origin : @x @y;
+	-o-transform-origin : @x @y;
+	-ms-transform-origin : @x @y;
+	transform-origin : @x @y;
 }
+
+.perspective(@p:500){
+	perspective: @p;
+	-webkit-perspective: @p; /* Safari 和 Chrome */
+}
+
+//
+//none：无转换
+//matrix(<number>,<number>,<number>,<number>,<number>,<number>)：以一个含六值的(a,b,c,d,e,f)变换矩阵的形式指定一个2D变换，相当于直接应用一个[a,b,c,d,e,f]变换矩阵
+//translate(<length>[, <length>])：指定对象的2D translation（2D平移）。第一个参数对应X轴，第二个参数对应Y轴。如果第二个参数未提供，则默认值为0
+//translateX(<length>)：指定对象X轴（水平方向）的平移
+//translateY(<length>)：指定对象Y轴（垂直方向）的平移
+//rotate(<angle>)：指定对象的2D rotation（2D旋转），需先有transform-origin属性的定义
+//scale(<number>[, <number>])：指定对象的2D scale（2D缩放）。第一个参数对应X轴，第二个参数对应Y轴。如果第二个参数未提供，则默认取第一个参数的值
+//scaleX(<number>)：指定对象X轴的（水平方向）缩放
+//scaleY(<number>)：指定对象Y轴的（垂直方向）缩放
+//skew(<angle> [, <angle>])：指定对象skew transformation（斜切扭曲）。第一个参数对应X轴，第二个参数对应Y轴。如果第二个参数未提供，则默认值为0
+//skewX(<angle>)：指定对象X轴的（水平方向）扭曲
+//skewY(<angle>)：指定对象Y轴的（垂直方向）扭曲
+//
+.transform(@code){
+	-webkit-transform   : @code;
+	-moz-transform      : @code;
+	-ms-transform       : @code;
+	-o-transform 		: @code;
+	transform           : @code;
+}
+
+//
+//[ animation-name ]：检索或设置对象所应用的动画名称
+//[ animation-duration ]：检索或设置对象动画的持续时间
+//[ animation-timing-function ]：检索或设置对象动画的过渡类型
+//[ animation-delay ]：检索或设置对象动画延迟的时间
+//[ animation-iteration-count ]：检索或设置对象动画的循环次数 infinite ：无限循环
+//[ animation-direction ]：检索或设置对象动画在循环中是否反向运动 normal,alternate ：正常与反向交替
+//[ animation-play-state ]：检索或设置对象动画的状态。w3c正考虑是否将该属性移除，因为动画的状态可以通过其它的方式实现，比如重设样式
+//	opara 不支持
+//
+.animation(@code){
+	-webkit-animation   : @code;
+	-moz-animation      : @code;
+	-ms-animation       : @code;
+	animation           : @code;
+}
+
 
 //
 //文本超出显示省略号
