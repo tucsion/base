@@ -1,86 +1,68 @@
-svg {
-  height: 500px;
+#demo {
   width: 500px;
+  height: 500px;
+  border: 1px solid #ccc;
+  margin: 50px auto;
+  padding-top: 100px;
 }
-svg #sanjiao {
+#demo a.btn {
+  display: table-cell;
+  height: 50px;
+  width: 50px;
+  border: 1px solid #ccc;
+  vertical-align: middle;
+}
+#demo a.btn span {
+  width: 50px;
+  display: block;
+  position: relative;
+  border-top: 5px solid #000000;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+#demo a.btn span:before,
+#demo a.btn span:after {
+  content: '';
+  width: 50px;
+  position: absolute;
+  left: 0;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+#demo a.btn span:before {
+  bottom: 15px;
+  border-top: 5px solid blue;
+}
+#demo a.btn span:after {
+  top: 10px;
+  border-top: 5px solid red;
+}
+#demo a.btn:hover span {
+  width: 60px;
+}
+#demo a.btn.active span {
+  border-top-color: #fff;
   -webkit-transform-origin: center center;
   -moz-transform-origin: center center;
   -o-transform-origin: center center;
   -ms-transform-origin: center center;
   transform-origin: center center;
 }
-svg:hover #juxing {
-  -webkit-transform-origin: center center;
-  -moz-transform-origin: center center;
-  -o-transform-origin: center center;
-  -ms-transform-origin: center center;
-  transform-origin: center center;
-  -webkit-animation: box 2s linear infinite;
-  -moz-animation: box 2s linear infinite;
-  -ms-animation: box 2s linear infinite;
-  animation: box 2s linear infinite;
+#demo a.btn.active span:before {
+  -webkit-transform: translateY(15px) rotate(-40deg);
+  -moz-transform: translateY(15px) rotate(-40deg);
+  -ms-transform: translateY(15px) rotate(-40deg);
+  -o-transform: translateY(15px) rotate(-40deg);
+  transform: translateY(15px) rotate(-40deg);
 }
-@keyframes zoom {
-  0% {
-    -webkit-transform: scale(0) rotate(0);
-    -moz-transform: scale(0) rotate(0);
-    -ms-transform: scale(0) rotate(0);
-    -o-transform: scale(0) rotate(0);
-    transform: scale(0) rotate(0);
-  }
-  50% {
-    -webkit-transform: scale(0.6) rotate(120deg);
-    -moz-transform: scale(0.6) rotate(120deg);
-    -ms-transform: scale(0.6) rotate(120deg);
-    -o-transform: scale(0.6) rotate(120deg);
-    transform: scale(0.6) rotate(120deg);
-  }
-  100% {
-    -webkit-transform: scale(1.2) rotate(240deg);
-    -moz-transform: scale(1.2) rotate(240deg);
-    -ms-transform: scale(1.2) rotate(240deg);
-    -o-transform: scale(1.2) rotate(240deg);
-    transform: scale(1.2) rotate(240deg);
-  }
-}
-@keyframes box {
-  0% {
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  50% {
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    transform: rotate(180deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-@keyframes svg1 {
-  0% {
-    filter: alpha(opacity=0);
-    opacity: 0;
-  }
-  10% {
-    filter: alpha(opacity=10);
-    opacity: 0.1;
-  }
-  50% {
-    filter: alpha(opacity=60);
-    opacity: 0.6;
-  }
-  100% {
-    filter: alpha(opacity=100);
-    opacity: 1;
-  }
+#demo a.btn.active span:after {
+  -webkit-transform: translateY(-15px) rotate(40deg);
+  -moz-transform: translateY(-15px) rotate(40deg);
+  -ms-transform: translateY(-15px) rotate(40deg);
+  -o-transform: translateY(-15px) rotate(40deg);
+  transform: translateY(-15px) rotate(40deg);
 }

@@ -11,11 +11,17 @@
 	border-radius: @topleft @topright @bottomright @bottomleft;
 }
 
-.transition(@time: 1s, @prop: all, @ease: ease-in-out){
-	-webkit-transition: @prop @time @ease;
-	-moz-transition: @prop @time @ease;
-	-o-transition: @prop @time @ease;
-	transition: @prop @time @ease;
+//
+//[ transition-property ]：检索或设置对象中的参与过渡的属性
+//[ transition-duration ]：检索或设置对象过渡的持续时间
+//[ transition-timing-function ]：检索或设置对象中过渡的动画类型
+//[ transition-delay ]：检索或设置对象延迟过渡的时间
+//
+.transition(@code){
+	-webkit-transition: @code;
+	-moz-transition: @code;
+	-o-transition: @code;
+	transition: @code;
 }
 
 //

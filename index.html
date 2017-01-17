@@ -8,27 +8,21 @@
 </head>
 <body>
 	
-	<svg id="demo" data-src="images/svg.svg"></svg>
-
-	<div id="box">
-		<div class="box"></div>
+	
+	<div id="demo">
+		<a href="#0" class="btn">
+			<span></span>
+		</a>
 	</div>
 
-	
+	<button>查看效果</button>
+
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript">
-		$(function(){
-			var demoSrc = $('#demo').attr('data-src');
-			$.ajax({
-				url: demoSrc,
-				dataType: 'xml',
-				success : function(data){
-					console.log(data.documentElement);
-					$('#demo').after(data.documentElement).remove();
-				}
-			})
-			
-		})
+		$('button').on('click', function() {
+			$('#demo .btn').toggleClass('active');
+		});
 	</script>
+
 </body>
 </html>
